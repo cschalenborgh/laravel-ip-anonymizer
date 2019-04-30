@@ -1,0 +1,42 @@
+{
+    "name": "cschalenborgh/laravel-ip-anonymizer",
+    "description": "IPv4 and IPv6 address anonymizer for Laravel",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "anonymizer",
+        "ip-anonymizer",
+        "gdpr"
+    ],
+    "authors": [
+        {
+            "name": "Chris Schalenborgh",
+            "email": "chris@schalenborgh.be",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CSchalenborgh\\IpAnonymizer\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CSchalenborgh\\IpAnonymizer\\ServiceProvider"
+            ],
+            "aliases": {
+                "IpAnonymizer": "CSchalenborgh\\IpAnonymizer\\Facade"
+            }
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    }
+}
