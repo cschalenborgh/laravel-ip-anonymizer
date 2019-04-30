@@ -3,9 +3,7 @@
 namespace CSchalenborgh\IpAnonymizer;
 
 /**
- * Class IpAnonymizer
- *
- * @package CSchalenborgh\IpAnonymizer
+ * Class IpAnonymizer.
  */
 class IpAnonymizer
 {
@@ -13,7 +11,7 @@ class IpAnonymizer
      * @var string
      */
     private $ip4_netmask = '255.255.255.0';
-    
+
     /**
      * @var string
      */
@@ -23,13 +21,13 @@ class IpAnonymizer
      * Anonymize an IPv4 or IPv6 address.
      *
      * @param string $ip
-     * 
+     *
      * @return string
      */
     public function anonymize(string $ip): string
     {
         $packed_ip = inet_pton($ip);
-        
+
         if (4 === strlen($packed_ip)) {
             return $this->anonymizeIPv4($ip);
         } elseif (16 === strlen($packed_ip)) {
@@ -38,32 +36,34 @@ class IpAnonymizer
 
         return $ip;
     }
-    
+
     /**
-     * Anonymize an IPv4 address
+     * Anonymize an IPv4 address.
      *
      * @param string $address
      * @param string $netmask
-     * 
+     *
      * @return string
      */
     public function anonymizeIPv4(string $address, string $netmask = null): string
     {
         $netmask = $netmask ?? $this->ip4_netmask;
+
         return inet_ntop(inet_pton($address) & inet_pton($netmask));
     }
-    
+
     /**
-     * Anonymize an IPv6 address
-     * 
+     * Anonymize an IPv6 address.
+     *
      * @param string $address
      * @param string $netmask
-     * 
+     *
      * @return string
      */
     public function anonymizeIPv6(string $address, string $netmask = null): string
     {
         $netmask = $netmask ?? $this->ip6_netmask;
+
         return inet_ntop(inet_pton($address) & inet_pton($netmask));
     }
 
