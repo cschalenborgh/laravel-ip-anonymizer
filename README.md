@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cschalenborgh/laravel-ip-anonymizer.svg?style=flat-square)](https://packagist.org/packages/cschalenborgh/laravel-ip-anonymizer)
 [![Build Status](https://img.shields.io/travis/cschalenborgh/laravel-ip-anonymizer/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-permission)
+[![StyleCI](https://styleci.io/repos/184339937/shield)](https://styleci.io/repos/184339937)
 [![Total Downloads](https://img.shields.io/packagist/dt/cschalenborgh/laravel-ip-anonymizer.svg?style=flat-square)](https://packagist.org/packages/cschalenborgh/laravel-ip-anonymizer)
 
 ## Examples
