@@ -5,9 +5,7 @@ namespace Cschalenborgh\IpAnonymizer;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class IpAnonymizerServiceProvider
- *
- * @package Cschalenborgh\IpAnonymizer
+ * Class IpAnonymizerServiceProvider.
  */
 class IpAnonymizerServiceProvider extends ServiceProvider
 {
