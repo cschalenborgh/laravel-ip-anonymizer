@@ -55,8 +55,14 @@ echo IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6', 'fff
 
 
 ```php
+echo (new IpAnonymizer())->anonymizeIPv4('133.242.241.12');
+// returns 133.242.241.0
+
 echo (new IpAnonymizer())->anonymizeIPv4('133.242.241.12', '255.0.0.0');
 // returns 133.0.0.0
+
+echo (new IpAnonymizer())->anonymizeIPv6('2001:db8:85a3::1319:8a2e:370:7344');
+// returns 2001:db8:85a3::
 
 echo (new IpAnonymizer())->anonymizeIPv6('2001:db8:85a3::1319:8a2e:370:7344', 'ffff:ffff:0000:0000:0000:0000:0000:0000');
 // returns 2001:db8::
