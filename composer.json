@@ -29,10 +29,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CSchalenborgh\\IpAnonymizer\\ServiceProvider"
+                "CSchalenborgh\\IpAnonymizer\\IpAnonymizerServiceProvider"
             ],
             "aliases": {
-                "IpAnonymizer": "CSchalenborgh\\IpAnonymizer\\Facade"
+                "IpAnonymizer": "CSchalenborgh\\IpAnonymizer\\IpAnonymizerFacade"
             }
         }
     },
