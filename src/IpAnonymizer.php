@@ -3,9 +3,7 @@
 namespace CSchalenborgh\IpAnonymizer;
 
 /**
- * Class IpAnonymizer
- *
- * @package CSchalenborgh\IpAnonymizer
+ * Class IpAnonymizer.
  */
 class IpAnonymizer
 {

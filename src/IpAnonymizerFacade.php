@@ -5,9 +5,7 @@ namespace Cschalenborgh\IpAnonymizer;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class IpAnonymizerFacade
- *
- * @package Cschalenborgh\IpAnonymizer
+ * Class IpAnonymizerFacade.
  */
 class IpAnonymizerFacade extends Facade
 {
