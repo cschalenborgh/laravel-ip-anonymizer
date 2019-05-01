@@ -1,6 +1,6 @@
 <?php
 
-namespace CSchalenborgh\IpAnonymizer;
+namespace Cschalenborgh\IpAnonymizer;
 
 /**
  * Class IpAnonymizer.

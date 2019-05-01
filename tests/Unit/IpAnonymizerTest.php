@@ -1,9 +1,9 @@
 <?php
 
-namespace CSchalenborgh\IpAnonymizer\Tests;
+namespace Cschalenborgh\IpAnonymizer\Tests;
 
 use PHPUnit\Framework\TestCase;
-use CSchalenborgh\IpAnonymizer\IpAnonymizer;
+use Cschalenborgh\IpAnonymizer\IpAnonymizer;
 
 class IpAnonymizerTest extends TestCase
 {
