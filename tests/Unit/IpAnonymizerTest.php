@@ -2,8 +2,8 @@
 
 namespace CSchalenborgh\IpAnonymizer\Tests;
 
-use CSchalenborgh\IpAnonymizer\IpAnonymizer;
 use PHPUnit\Framework\TestCase;
+use CSchalenborgh\IpAnonymizer\IpAnonymizer;
 
 class IpAnonymizerTest extends TestCase
 {
