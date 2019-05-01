@@ -1,4 +1,4 @@
-# IP Anonymizer for Laravel
+# Ip Anonymizer package for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cschalenborgh/laravel-ip-anonymizer.svg?style=flat-square)](https://packagist.org/packages/cschalenborgh/laravel-ip-anonymizer)
 [![Build Status](https://travis-ci.org/cschalenborgh/php-zalando.svg?branch=master)](https://travis-ci.org/cschalenborgh/php-zalando)
@@ -6,13 +6,28 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/cschalenborgh/laravel-ip-anonymizer.svg?style=flat-square)](https://packagist.org/packages/cschalenborgh/laravel-ip-anonymizer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Install
+# Description
 
-```angular2html
+You can use this package to easily anonymize IP addresses in your Laravel application.
+
+## Installation
+
+You can install the package via composer:
+
+``` bash
 composer require cschalenborgh/laravel-ip-anonymizer
 ```
 
-## Examples
+The service provider will automatically get registered. Or you may manually add the service provider in your config/app.php file:
+
+```php
+'providers' => [
+    // ...
+    Cschalenborgh\IpAnonymizer\IpAnonymizerServiceProvider::class,
+];
+```
+
+## Usage
 
 ```php
 IpAnonymizer::anonymizeIp('133.242.241.12'); 
