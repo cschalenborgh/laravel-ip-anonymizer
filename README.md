@@ -9,6 +9,7 @@
 # Description
 
 You can use this package to easily anonymize IP addresses in your Laravel application.
+Requires PHP 7.1 or higher.
 
 ## Installation
 
@@ -30,25 +31,25 @@ The service provider will automatically get registered. Or you may manually add 
 ## Usage
 
 ```php
-IpAnonymizer::anonymizeIp('133.242.241.12'); 
+echo IpAnonymizer::anonymizeIp('133.242.241.12'); 
 // returns 133.242.241.0
 ```
 
 
 ```php
-IpAnonymizer::anonymizeIp('133.242.241.12', '255.255.0.0'); 
+echo IpAnonymizer::anonymizeIp('133.242.241.12', '255.255.0.0'); 
 // returns 133.242.0.0
 ```
 
 
 ```php
-IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6'); 
+echo IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6'); 
 // returns 2001:db8:85a3::
 ```
 
 
 ```php
-IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6', 'ffff:ffff:0000:0000:0000:0000:0000:0000'); 
+echo IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6', 'ffff:ffff:0000:0000:0000:0000:0000:0000'); 
 // returns 2001:db8::
 ```
 

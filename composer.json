@@ -29,14 +29,17 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CSchalenborgh\\IpAnonymizer\\IpAnonymizerServiceProvider"
+                "Cschalenborgh\\IpAnonymizer\\IpAnonymizerServiceProvider"
             ],
             "aliases": {
-                "IpAnonymizer": "CSchalenborgh\\IpAnonymizer\\IpAnonymizerFacade"
+                "IpAnonymizer": "Cschalenborgh\\IpAnonymizer\\IpAnonymizerFacade"
             }
         }
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5"
+    },
+    "require": {
+        "php" : ">=7.1"
     }
 }
