@@ -10,19 +10,16 @@ use Cache;
 class RateLimiter
 {
     /**
-     *
      * @var string
      */
     protected $name;
 
     /**
-     *
      * @var int
      */
     protected $max_requests;
 
     /**
-     *
      * @var int
      */
     protected $period;
@@ -43,12 +40,12 @@ class RateLimiter
 
     /**
      * Rate Limiting
-     * http://stackoverflow.com/a/668327/670662
+     * http://stackoverflow.com/a/668327/670662.
      *
      * @param string $id
      * @param float $use
      *
-     * @return boolean
+     * @return bool
      */
     public function check($id, $use = 1.0)
     {
@@ -57,10 +54,11 @@ class RateLimiter
         $t_key = $this->keyTime($id);
         $a_key = $this->keyAllow($id);
 
-        if (!Cache::has($t_key)) {
+        if (! Cache::has($t_key)) {
             // first hit; setup storage; allow.
             Cache::put($t_key, time(), $this->period);
             Cache::put($a_key, ($this->max_requests - $use), $this->period);
+
             return true;
         }
 
@@ -79,10 +77,12 @@ class RateLimiter
         if ($allowance < $use) {
             // need to wait for more 'tokens' to be in the bucket.
             Cache::put($a_key, $allowance, $this->period);
+
             return false;
         }
 
         Cache::put($a_key, $allowance - $use, $this->period);
+
         return true;
     }
 
@@ -99,7 +99,7 @@ class RateLimiter
 
         $a_key = $this->keyAllow($id);
 
-        if (!Cache::has($a_key)) {
+        if (! Cache::has($a_key)) {
             return $this->max_requests;
         }
 
@@ -107,7 +107,7 @@ class RateLimiter
     }
 
     /**
-     * Purge rate limit record for $id
+     * Purge rate limit record for $id.
      *
      * @param string $id
      *
@@ -126,7 +126,7 @@ class RateLimiter
      */
     private function keyTime($id)
     {
-        return $this->name . ":" . $id . ":time";
+        return $this->name.':'.$id.':time';
     }
 
     /**
@@ -136,6 +136,6 @@ class RateLimiter
      */
     private function keyAllow($id)
     {
-        return $this->name . ":" . $id . ":allow";
+        return $this->name.':'.$id.':allow';
     }
 }
