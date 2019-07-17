@@ -1,4 +1,4 @@
-# Ip Anonymizer package for Laravel
+# Rate limiter package for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cschalenborgh/laravel-ip-anonymizer.svg?style=flat-square)](https://packagist.org/packages/cschalenborgh/laravel-ip-anonymizer)
 [![Build Status](https://travis-ci.org/cschalenborgh/laravel-ip-anonymizer.svg?branch=master)](https://travis-ci.org/cschalenborgh/laravel-ip-anonymizer)
@@ -8,7 +8,7 @@
 
 # Description
 
-You can use this package to easily anonymize IP addresses in your Laravel application.
+You can use this package to rate limiter specific logic of your application. This could be anything, from Guzzle calls, to more specific logic.
 Requires PHP 7.1 or higher.
 
 ## Installation
@@ -16,7 +16,7 @@ Requires PHP 7.1 or higher.
 You can install the package via composer:
 
 ``` bash
-composer require cschalenborgh/laravel-ip-anonymizer
+composer require cschalenborgh/laravel-rate-limiter
 ```
 
 The service provider will automatically get registered. Or you may manually add the service provider in your config/app.php file:
@@ -24,46 +24,10 @@ The service provider will automatically get registered. Or you may manually add 
 ```php
 'providers' => [
     // ...
-    Cschalenborgh\IpAnonymizer\IpAnonymizerServiceProvider::class,
+    Cschalenborgh\RateLimiter\RateLimiterServiceProvider::class,
 ];
 ```
 
 ## Usage
 
-```php
-echo IpAnonymizer::anonymizeIp('133.242.241.12'); 
-// returns 133.242.241.0
-```
-
-
-```php
-echo IpAnonymizer::anonymizeIp('133.242.241.12', '255.255.0.0'); 
-// returns 133.242.0.0
-```
-
-
-```php
-echo IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6'); 
-// returns 2001:db8:85a3::
-```
-
-
-```php
-echo IpAnonymizer::anonymizeIp('2001:db8:85a3::1319:8a2e:370:7344', 'ipv6', 'ffff:ffff:0000:0000:0000:0000:0000:0000'); 
-// returns 2001:db8::
-```
-
-
-```php
-echo (new IpAnonymizer())->anonymizeIPv4('133.242.241.12');
-// returns 133.242.241.0
-
-echo (new IpAnonymizer())->anonymizeIPv4('133.242.241.12', '255.0.0.0');
-// returns 133.0.0.0
-
-echo (new IpAnonymizer())->anonymizeIPv6('2001:db8:85a3::1319:8a2e:370:7344');
-// returns 2001:db8:85a3::
-
-echo (new IpAnonymizer())->anonymizeIPv6('2001:db8:85a3::1319:8a2e:370:7344', 'ffff:ffff:0000:0000:0000:0000:0000:0000');
-// returns 2001:db8::
-```
+TODO

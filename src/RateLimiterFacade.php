@@ -1,19 +1,19 @@
 <?php
 
-namespace Cschalenborgh\IpAnonymizer;
+namespace Cschalenborgh\RateLimiter;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class IpAnonymizerFacade.
+ * Class RateLimiterFacade.
  */
-class IpAnonymizerFacade extends Facade
+class RateLimiterFacade extends Facade
 {
     /**
      * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-ip-anonymizer';
+        return 'laravel-rate-limiter';
     }
 }

@@ -1,12 +1,12 @@
 {
-    "name": "cschalenborgh/laravel-ip-anonymizer",
-    "description": "IPv4 and IPv6 address anonymizer for Laravel",
+    "name": "cschalenborgh/laravel-rate-limiter",
+    "description": "Rate limiter for Laravel",
     "type": "library",
     "keywords": [
         "laravel",
-        "anonymizer",
-        "ip-anonymizer",
-        "gdpr"
+        "rate-limiter",
+        "throttle",
+        "rate-limit"
     ],
     "authors": [
         {
@@ -17,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Cschalenborgh\\IpAnonymizer\\": "src"
+            "Cschalenborgh\\RateLimiter\\": "src"
         }
     },
     "scripts": {
@@ -29,10 +29,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Cschalenborgh\\IpAnonymizer\\IpAnonymizerServiceProvider"
+                "Cschalenborgh\\RateLimiter\\RateLimiterServiceProvider"
             ],
             "aliases": {
-                "IpAnonymizer": "Cschalenborgh\\IpAnonymizer\\IpAnonymizerFacade"
+                "RateLimiter": "Cschalenborgh\\RateLimiter\\RateLimiterFacade"
             }
         }
     },
